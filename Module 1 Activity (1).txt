@@ -1,0 +1,59 @@
+Implement the application for storing product details in hashmap
+The hashmap should contain product id and product object as key value pair .
+
+implement the functionality to accept the product details (name,quantity and price ) from user and store in that map .
+Generate the product id using Math.random method.
+
+implement the functionality to accept the supplier details ( supplier name,address, mobile no) from user and store in another hashmap. 
+The hashmap should have supplier id as key and supplier object as value .
+generate the supplier id using math.random method.
+Display all the records of hashmap .
+
+create below classes 
+
+class product {
+	private int productId;
+	private String productName;
+	private double price;
+	private int quantity;
+
+	//generate getter and setter ;
+}
+class Supplier {
+	private int supplierId;
+	private String name ;
+	private String mobileNo;
+	private String address;
+//generate getter and setter ;
+}
+
+interface ISuperShoppeService {
+	public int addProduct(Product product);
+	public int addSupplier(Supplier sup);
+	public HashMap<Integer,Product> getAllProducts();
+	public HashMap<Integer,Supplier> getAllSuppliers();
+}
+class SuperShoppeServiceImpl implements ISuperShoppeService {
+	// implement all methods here 
+} 	
+
+interface ISuperShoppeDAO {
+	public int addProduct(Product product);
+	public int addSupplier(Supplier sup);
+	public HashMap<Integer,Product> getAllProducts();
+	public HashMap<Integer,Supplier> getAllSuppliers();
+}
+class SuperShoppeDAOImpl implements ISuperShoppeDAO {
+	HashMap<Integer,Product> products;
+	HashMap<Integer,Supplier> suppliers;
+	
+	// implement all methods here 
+} 	
+
+class Client {
+	//implement logic here to accept the product details 		
+	/and store in hashmap using layered architecture 
+	//implement the logic for accepting supplier details 
+	//and store in another hashmap.
+}
+
